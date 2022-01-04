@@ -1,0 +1,187 @@
+*
+    margin: 0
+    padding: 0
+
+@mixin buttons
+    width: 8rem
+    border-radius: 30px
+    border: 2px solid white
+    font-family: 'Poppins', sans-serif
+    color: white
+    opacity: 0.7
+
+    &:hover
+        opacity: 1
+
+.main_list
+    background: linear-gradient(rgb(2, 0, 96), rgb(96, 0, 96))
+    width: 100vw
+    height: 100vh
+    padding-top: 5%
+    padding-bottom: 5%
+
+.main_list__list_header
+    background-color: rgb(117, 0, 130)
+    border-top-left-radius: 30px
+    border-top-right-radius: 30px
+    border: 2px solid white
+    background-image: url("./images/list_header_fon_1.png")
+    width: 70vw
+    padding-top: 100px
+    background-size: contain
+    margin: auto
+    padding: 3% 1% 1% 1%
+
+    .main_list__name
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+
+        h1
+            font-family: 'Waterfall', cursive
+            color: white
+            font-size: 4rem
+        div
+            display: flex
+            flex-direction: column
+            justify-content: center
+
+            #plusTask
+                @include buttons
+                margin-bottom: 5px
+                background-color: #4169E1
+
+            #sortDyPriority
+                @include buttons
+                background-color: #7B68EE
+
+    div
+
+        #all
+            @include buttons
+            margin-right: 3px
+            background-color: #20B2AA
+
+        #active
+            @include buttons
+            margin-right: 3px
+            background-color: #2E8B57
+
+        #finished
+            @include buttons
+            background-color: #556B2F
+
+.content
+    background-color: white
+    border-bottom-left-radius: 30px
+    border-bottom-right-radius: 30px
+    border: 2px solid white
+    width: 70vw
+    padding-top: 100px
+    background-size: contain
+    margin: auto
+    padding: 3% 1% 1% 1%
+    display: flex
+    flex-direction: column
+    align-items: end
+
+    .content__form
+        width: 100%
+
+        .content__item
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            width: 100%
+
+            .content__cross, .content__check_mark
+                opacity: 0.7
+                width: 48px
+                height: 48px
+            
+                &:hover
+                    opacity: 1
+
+            .content__task
+                background-color: #d5dff7
+                border-radius: 30px
+                border: 2px solid #6781c2
+                font-family: 'Poppins', sans-serif
+                width: 100%
+                margin: 5px 10px 5px 10px
+                padding: 5px
+                color: #483D8B
+                font-family: 'Rubik', sans-serif
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+
+                &:focus
+                    background-color: white
+
+    button
+        @include buttons
+        background-color: #4169E1
+        border-color: #0000CD
+        margin-top: 10px
+
+#plusTaskForm
+    position: absolute
+    width: 200px
+    height: 200px
+    left: calc(50% - 100px)
+    top: calc(50% - 100px)
+    background-color: rgb(129, 93, 126)
+
+.modal
+    width: 100%
+    height: 100%
+    background-color: rgba(32, 32, 31, 0.7)
+    position: fixed
+    z-index: 1
+
+    #plusTaskForm
+        position: absolute
+        width: 430px
+        height: 230px
+        left: calc(50% - 215px)
+        top: calc(50% - 115px)
+        background-color: rgb(231, 225, 241)
+        padding: 2%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        border-radius: 30px
+        font-family: 'Poppins', sans-serif
+        color: #c760ca
+        border: 2px solid white
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+
+        #taskText
+            height: 25px
+            border-radius: 10px
+
+        #nameHigh
+            color: #cf0f0f
+
+        #nameMedium
+            color: #ecde13
+
+        #nameLow
+            color: #31c031
+
+    .modal_buttons
+        display: flex
+        justify-content: space-between
+        
+        #addBtn, #cancelBtn
+            @include buttons
+            background-color: #56198f
+            border-color: #390441
+          
+.display-none 
+    display: none
+
+// @media screen and (max-width: 420px)
+//     .main_list__name
+//         display: flex
+//         flex-direction: column

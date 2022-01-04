@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans&family=Poppins:wght@600&family=Pushster&family=Roboto:wght@300&family=Waterfall&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/icon.svg" type="image/svg">
+    <script src="script.js" defer></script>
+    <title>To-do list</title>
+</head>
+
+<body>
+    <article class="modal display-none">
+        <form id="plusTaskForm">
+            <input type="text" id="taskText" placeholder="Enter new Task" autofocus>
+            <div class="modal__choosePriority">
+                <p>Choose the task priority:</p>
+                <input type="radio" id="high" name="priority" value="high">
+                <label for="high" id="nameHigh">High</label> <br>
+                <input type="radio" id="medium" name="priority" value="medium">
+                <label for="medium" id="nameMedium">Medium</label> <br>
+                <input type="radio" id="low" name="priority" value="low">
+                <label for="low" id="nameLow">Low</label>
+            </div>
+            <div class="modal_buttons">
+                <button id="addBtn">Add</button>
+                <button id="cancelBtn">Cancel</button>
+            </div>
+        </form>
+    </article>
+    <section class="main_list">
+        <article class="main_list__list_header">
+            <div class="main_list__name">
+                <h1>To-do list</h1>
+                <div>
+                    <button type="submit" id="plusTask">+ Task</button>
+                    <button type="submit" id="sortDyPriority">Sort by priority</button>
+                </div>
+            </div>
+            <div>
+                <button type="submit" id="all">All</button>
+                <button type="submit" id="active">Active</button>
+                <button type="submit" id="finished">Finished</button>
+            </div>
+        </article>
+        <article class="content">
+            <div class="content__form">
+            </div>
+            <button id="cleanAll">Clean All</button>
+        </article>
+    </section>
+</body>
+
+</html>
